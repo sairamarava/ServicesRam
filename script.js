@@ -4,9 +4,7 @@ const mainNav = document.getElementById("mainNav");
 
 menuToggle.addEventListener("click", () => {
   mainNav.classList.toggle("active");
-  menuToggle.textContent = mainNav.classList.contains("active")
-    ? "✕"
-    : "☰";
+  menuToggle.textContent = mainNav.classList.contains("active") ? "✕" : "☰";
 });
 
 // Smooth Scrolling
@@ -179,3 +177,86 @@ document
   });
 
 window.addEventListener("DOMContentLoaded", typeLetter);
+
+// Project box operations
+const projects = [
+  {
+    title: "Portfolio Website",
+    src: "src/videos/portfoliopage.mp4",
+  },
+  {
+    title: "Sara AI ChatBot",
+    src: "src/videos/sarai.mp4",
+  },
+  {
+    title: "Personal Blog UI",
+    src: "src/videos/ram writes.mp4",
+  },
+  {
+    title:"Weather Tracking",
+    src: "src/videos/weathertracking.mp4"
+  },
+  {
+    title:"Movie Recommendation",
+    src: "src/videos/movie rec.mp4"
+  },
+  {
+    title:"Luxeira E-commerce Site",
+    src: "src/videos/luxerira.mp4"
+  },
+  {
+    title:"Foody - UI Design",
+    src: "src/videos/foody.mp4"
+  },
+  {
+    title:"Foody - Website",
+    src: "src/videos/foody web.mp4"
+  },
+  {
+    title:"Emotion Analysis Model",
+    src: "src/videos/emotion.mp4"
+  },
+  {
+    title:"Email Spam Classifier",
+    src: "src/videos/email spam.mp4"
+  },
+  {
+    title:"EduHub UI/UX Design",
+    src: "src/videos/eduhubui.mp4"
+  },
+  {
+    title:"Apex Mobiles UI",
+    src: "src/videos/apex.mp4"
+  },
+  {
+    title:"Alumni Connect UI/UX",
+    src: "src/videos/alumniconn.mp4"
+  }
+];
+
+let currentIndex = 0;
+const videoEl = document.getElementById("video");
+const titleEl = document.getElementById("title");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+function updateSlide() {
+  videoEl.style.opacity = 0;
+  setTimeout(() => {
+    videoEl.src = projects[currentIndex].src;
+    titleEl.textContent = projects[currentIndex].title;
+    videoEl.style.opacity = 1;
+  }, 200);
+}
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+  updateSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  updateSlide();
+});
+
+updateSlide();
