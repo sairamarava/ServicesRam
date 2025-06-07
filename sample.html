@@ -2,118 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project Slideshow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Tech Stack</title>
   <style>
-    body {
+    :root {
+      --primary-dark: #2e221e;
+      --primary: #4b362d;
+      --primary-light: #a68a7f;
+
+      --accent: #d4a373;
+      --accent-light: #f1dcc0;
+
+      --bg-color: #fdfaf6;
+      --text-color: #2c1d18;
+      --white: #ffffff;
+      --light-gray: #eae6df;
+    }
+
+    * {
       margin: 0;
-      background: #0f0f0f;
-      font-family: "Segoe UI", sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .container {
-      width: 100%;
+    .tech-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 3rem;
     }
 
-    .slideshow {
-      text-align: center;
-      background: #1c1c1c;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      width: 600px;
-      max-width: 90%;
-      animation: fadeIn 0.5s ease-in-out;
+    .tech-card {
+      position: relative;
+      background: var(--primary-light);
+      border-radius: 24px;
+      padding: 3rem 2rem 2rem;
+      width: 340px;
+      height: 260px;
+      color: var(--text-color);
+      box-shadow: 0 12px 40px rgba(78, 61, 52, 0.15);
+      border: 2px solid var(--accent-light);
+      transition: all 0.4s ease-in-out;
+      overflow: hidden;
     }
 
-    video {
-      width: 100%;
-      max-height: 300px;
-      border-radius: 12px;
-      transition: opacity 0.5s ease;
+    .tech-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 18px 50px rgba(212, 163, 115, 0.4);
     }
 
-
-    .controls {
-      margin-top: 20px;
+    .tech-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
     }
 
+    .tech-list {
+      list-style: none;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    .ribbon {
+      position: absolute;
+      top: -10px;
+      left: -30px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 8px 60px;
+      transform: rotate(-45deg);
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: floaty 2.5s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% { transform: rotate(-45deg) translateY(0); }
+      50% { transform: rotate(-45deg) translateY(-5px); }
+      100% { transform: rotate(-45deg) translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .tech-card {
+        width: 90%;
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="slideshow">
-      <video id="video" src="" controls autoplay muted></video>
-      <h2 id="title">Loading...</h2>
-      <div class="controls">
-        <button class="btn" id="prevBtn">⟵ Prev</button>
-        <button class="btn" id="nextBtn">Next ⟶</button>
-      </div>
+  <div class="tech-container">
+    <div class="tech-card">
+      <div class="ribbon">Web Dev</div>
+      <div class="tech-title">Web Development</div>
+      <ul class="tech-list">
+        <li>HTML, CSS, JavaScript, Tailwind</li>
+        <li>React, Next.js, Node.js</li>
+        <li>MongoDB, Express</li>
+      </ul>
+    </div>
+
+    <div class="tech-card">
+      <div class="ribbon">AI / ML</div>
+      <div class="tech-title">AI / ML Solutions</div>
+      <ul class="tech-list">
+        <li>Python, Pandas, NumPy</li>
+        <li>Scikit-learn, TensorFlow</li>
+        <li>CV & NLP Projects</li>
+      </ul>
+    </div>
+
+    <div class="tech-card">
+      <div class="ribbon">UI / UX</div>
+      <div class="tech-title">UI / UX Design</div>
+      <ul class="tech-list">
+        <li>Figma, Framer, Adobe XD</li>
+        <li>Design Systems, Prototyping</li>
+        <li>Wireframes, Responsive Design</li>
+      </ul>
     </div>
   </div>
 
-  <script>
-    const projects = [
-      {
-        title: "Portfolio Website",
-        src: "https://www.w3schools.com/html/mov_bbb.mp4"
-      },
-      {
-        title: "AI Chatbot Showcase",
-        src: "https://www.w3schools.com/html/movie.mp4"
-      },
-      {
-        title: "E-Commerce UI",
-        src: "https://www.w3schools.com/html/mov_bbb.mp4"
-      }
-    ];
-
-    let currentIndex = 0;
-    const videoEl = document.getElementById("video");
-    const titleEl = document.getElementById("title");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    function updateSlide() {
-      videoEl.style.opacity = 0;
-      setTimeout(() => {
-        videoEl.src = projects[currentIndex].src;
-        titleEl.textContent = projects[currentIndex].title;
-        videoEl.style.opacity = 1;
-      }, 200);
-    }
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-      updateSlide();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % projects.length;
-      updateSlide();
-    });
-
-    updateSlide();
-  </script>
 </body>
 </html>
