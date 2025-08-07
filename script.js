@@ -231,6 +231,14 @@ const projects = [
   {
     title:"Alumni Connect UI/UX",
     src: "src/videos/alumniconn.mp4"
+  },
+  {
+    title:"My Notes App",
+    src: "src/videos/My Notes MERN.mp4"
+  },
+  {
+    title:"EventMaster Event Managing App",
+    src:"src/videos/EVent Master - Made with Clipchamp.mp4"
   }
 ];
 
