@@ -1763,3 +1763,137 @@ section.section .section-subtitle,
 section.section p {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 }
+/*Experience Cards*//* Timeline Experience Section Styling - Enhanced Contrast */
+.experience-timeline {
+  position: relative;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1.5rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  width: 3px; /* Slightly thicker line */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.9), var(--accent), rgba(255,255,255,0.9));
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  height: 100%;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); /* Add subtle shadow to timeline */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  padding-left: 160px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 115px;
+  width: 12px; /* Slightly larger dot */
+  height: 12px;
+  background: var(--primary-dark); /* Darker dot for contrast */
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.9), 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(255,255,255,1), 0 0 20px rgba(212, 163, 115, 0.6);
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 600; /* Bolder text */
+  color: var(--primary-dark); /* Darker color for better contrast */
+  padding-right: 1rem;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8); /* Text shadow for readability */
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-date {
+  color: var(--accent);
+  transform: translateX(-5px);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.85); /* More opaque background */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(5px);
+}
+
+.experience-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Darker border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.timeline-item:hover .experience-card {
+  border-color: var(--accent);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.experience-company h3 {
+  font-size: 1.3rem;
+  font-weight: 700; /* Bolder heading */
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.experience-badge {
+  display: inline-block;
+  background-color: var(--primary); /* Darker background for better contrast */
+  color: white; /* White text for readability */
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 500; /* Slightly bolder text */
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-skills span {
+  background-color: rgba(0, 0, 0, 0.08); /* Darker background */
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
