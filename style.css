@@ -1627,13 +1627,12 @@ video {
     transform: translateY(0);
   }
 }
-
-/*For boxes tech stack*/
+/* Updated tech stack styling - more minimalist */
 .tech-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -1641,54 +1640,75 @@ video {
 
 .tech-card {
   position: relative;
-  width: 340px;
-  min-height: 280px;
-  padding: 3rem 2rem 2.5rem;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.2); /* Subtle glassy effect */
-  border: 1px solid var(--accent-light);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(18px);
+  width: 320px;
+  min-height: 260px;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9); /* More subtle transparency */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
   color: var(--text-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .tech-card:hover {
-  transform: translateY(-10px) scale(1.015);
-  box-shadow: 0 16px 40px rgba(212, 163, 115, 0.2);
-  border-color: var(--accent);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(212, 163, 115, 0.15);
+  border-color: var(--accent-light);
 }
 
 .tech-title {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--primary-dark);
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  letter-spacing: -0.3px;
 }
 
 .tech-list {
   list-style: none;
   padding-left: 0;
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--text-color);
-  opacity: 0.9;
 }
 
 .ribbon {
   position: absolute;
-  top: -10px;
-  left: -30px;
+  top: 1.5rem;
+  right: 1.5rem;
   background: var(--accent);
   color: var(--white);
-  padding: 8px 60px;
-  transform: rotate(-45deg);
-  font-size: 0.9rem;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: floaty 2.5s ease-in-out infinite;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .ribbon {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .tech-card {
+    width: 90%;
+    min-height: 220px;
+    padding: 2rem 1.5rem;
+  }
+  
+  .tech-title {
+    font-size: 1.4rem;
+  }
+  
+  .ribbon {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
 }
 
 @keyframes floaty {
@@ -1708,4 +1728,38 @@ video {
     width: 90%;
     height: auto;
   }
+}
+
+/* Add this to your style.css file */
+section.section {
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Add a semi-transparent overlay to ensure content remains readable */
+section.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.25); /* White with 85% opacity */
+    z-index: 0;
+}
+
+/* Ensure content appears above the background overlay */
+section.section > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure text remains readable */
+section.section .section-title,
+section.section .section-subtitle,
+section.section p {
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 }
