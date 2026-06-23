@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Ram Reddy | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/photo.ico">
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.86/build/spline-viewer.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="header container">
+      <div class="logo" style="display: flex; align-items: center; gap: 0.5rem">
+        <img
+          src="ram.png"
+          alt="ServicesByRam Logo"
+          class="logo-img"
+          style="
+            height: 60px;
+            width: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+          "
+        />
+        <span class="animated-logo" id="animatedLogo">
+          <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span
+          ><span>o</span><span>l</span><span>i</span> <span>o</span>
+        </span>
+
+        <audio
+          id="typeSound"
+          src="https://www.soundjay.com/buttons/sounds/button-16.mp3"
+          preload="auto"
+        ></audio>
+      </div>
+
+      <nav class="nav" id="mainNav" style="font-size: 1.2rem">
+        <a href="#services" class="nav-link">Domains</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+    </header>
+    <div class="scrolling-text-container" style="margin-top: 100px">
+      <p class="scrolling-text">Welcome to My Portfolio – Showcasing Skills, Projects & Innovation!</p>
+    </div>
+    <section class="hero" id="home">
+      <h1 class="hero-title">AI & Web Development Expertise</h1>
+      <p class="hero-subtitle">
+        Transforming ideas into exceptional digital experiences with
+        cutting-edge technology and creative solutions.
+      </p>
+      <a href="#contact" class="btn"><span>Hire Me</span></a>
+    </section>
+
+    <section class="section" id="services">
+
+      <!-- Your actual content -->
+      <div class="container">
+        <h2 class="section-title">My Services</h2>
+        <p class="section-subtitle">
+          Specialized solutions tailored to your needs with expertise in
+          multiple domains
+        </p>
+
+        <div class="services-grid" style="padding: 30px">
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">
+              Custom websites and web applications built with modern frameworks
+              and clean code. Responsive designs, e-commerce solutions, and CMS
+              implementations.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🤖</div>
+            <h3 class="service-title">ML & AI Solutions</h3>
+            <p class="service-description">
+              Machine learning models, data analysis, and AI-powered
+              applications. From predictive analytics to computer vision and
+              natural language processing.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-description">
+              Intuitive and beautiful user interfaces with focus on user
+              experience. Wireframing, prototyping, and full design systems that
+              engage and convert.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about-image">
+            <img src="ram.png" alt="Ram" width="100%" />
+          </div>
+          <div class="about-content">
+            <h2 class="about-title">About Me</h2>
+            <div class="underline-animate"></div>
+            <br />
+            <p class="about-text" style="text-align: justify">
+              Hello! I'm Ram, a multidisciplinary developer and designer with
+              over 1 year of experience creating digital products that users
+              love. My expertise spans across web development, machine learning,
+              and UI/UX design.
+            </p>
+            <p class="about-text" style="text-align: justify">
+              With a background in computer science and a passion for clean,
+              efficient code, I bring technical excellence and creative
+              problem-solving to every project. I believe in creating solutions
+              that not only look great but perform exceptionally well.
+            </p>
+            <p class="about-text" style="text-align: justify">
+              My approach combines technical precision with aesthetic
+              sensibility, ensuring that every project I work on achieves its
+              goals while providing an outstanding user experience.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+        <section class="section" id="experience">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-subtitle">Building expertise through hands-on learning and real-world projects</p>
+    
+    <div class="experience-timeline">
+      <!-- Experience 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">
+          <span>Aug 2025 - Sep 2025</span>
+        </div>
+        <div class="timeline-content">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-company">
+                <h3>Codec Technologies Pvt. Ltd.</h3>
+                <span class="experience-badge">MERN Stack Developer</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <p>Completed a one-month AICTE & ICAC approved internship developing full-stack web applications with MongoDB, Express, React, and Node.js.</p>
+              <div class="experience-skills">
+                <span>#WebDevelopment</span>
+                <span>#FullStackDeveloper</span>
+                <span>#MERN</span>
+              </div>
+              <a href="CodecTech.png" target="_blank" class="cert-button">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">
+          <span>Jun 2024 - Aug 2024</span>
+        </div>
+        <div class="timeline-content">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-company">
+                <h3>Inspire SoftTech Solutions</h3>
+                <span class="experience-badge">AI/ML Intern</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <p>Developed a Movie Recommendation System using Python and Streamlit, gaining hands-on experience in machine learning and AI implementations.</p>
+              <div class="experience-skills">
+                <span>#MachineLearning</span>
+                <span>#AI</span>
+                <span>#Python</span>
+              </div>
+              <a href="inspire.png" target="_blank" class="cert-button">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title animated-pop">Recent Projects</h2>
+        <p class="section-subtitle animated-pop delay">
+          A showcase of my recent work across different domains
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card" onclick="window.open('https://luxeira-e-commerce.netlify.app/', '_blank')">
+            <img
+              src="/src/E-Commerce Luxeira.jpg"
+              alt="E-commerce Platform"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">E-commerce Platform</h3>
+              <p class="project-category">Web Development</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://github.com/sairamarava/MovieRecommendation', '_blank')">
+            <img
+              src="/src/MovieRec.jpg"
+              alt="AI Recommendation System"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Movie Recommendation System</h3>
+              <p class="project-category">Machine Learning</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://www.figma.com/design/skIrwzsUqOsfSK10Ay1whW/Foody-Android?node-id=0-1&t=Zlc9nityV3G8P8io-1')">
+            <img
+              src="src/Foody.jpg"
+              alt="Financial App Design"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Foody App Design</h3>
+              <p class="project-category">UI/UX Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" onclick="window.open('https://www.figma.com/design/m9GMxK5i04Xl3GRRelmd1s/Alumniconnect-Homepage?t=swRAhi7cB61B5Jz1-1')">
+            <img
+              src="/src/Alumniconnect.jpg"
+              alt="E-commerce Platform"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">AlumniConnect Platform</h3>
+              <p class="project-category">Web Development</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://github.com/sairamarava/email-spam-classifier')">
+            <img
+              src="/src/Spam.jpg"
+              alt="AI Recommendation System"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">E-Mail Spam Classifier</h3>
+              <p class="project-category">Machine Learning</p>
+            </div>
+          </div>
+          <div class="project-card" onclick="window.open('https://www.figma.com/design/GykJvCBExxYS2nDrokxoZG/Workpro-Station?node-id=0-1&t=swRAhi7cB61B5Jz1-1')">
+            <img
+              src="src/Apex mobiles.jpg"
+              alt="Financial App Design"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Apex Mobiles Web App Design</h3>
+              <p class="project-category">UI/UX Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" onclick="window.open('https://weather-tracking-app.netlify.app/', '_blank')">
+            <img
+              src="/src/Weather Tracking.jpg"
+              alt="E-commerce Platform"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Weather Tracking Web App</h3>
+              <p class="project-category">Web Development</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://github.com/sairamarava/emotion-detection')">
+            <img
+              src="/src/Emotionanalysis.jpg"
+              alt="AI Recommendation System"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Emotion Analysis using Text</h3>
+              <p class="project-category">Machine Learning</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://www.figma.com/design/k5lRz7AM3uygtMUyNFLYQw/SpotifySample?node-id=0-1&t=4vu16seClwV8snXP-1')">
+            <img
+              src="src/SpotifySample.jpg"
+              alt="Financial App Design"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Spotify Landing Design</h3>
+              <p class="project-category">UI/UX Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-grid" onclick="window.open('https://foody-responsive-ecommerce.netlify.app/')">
+          <div class="project-card">
+            <img
+              src="/src/Foody Website.jpg"
+              alt="E-commerce Platform"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Foody Web Platform</h3>
+              <p class="project-category">Web Development</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://www.figma.com/design/QgzjYW1ZYxrQaT1kVPHE87/EcoTrack?node-id=0-1&t=Cdfy5nud3cfSL3cd-1')">
+            <img
+              src="/src/Eco-Track.jpg"
+              alt="AI Recommendation System"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Carbon Footprint Tracker</h3>
+              <p class="project-category">Web Development</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.open('https://www.figma.com/proto/ybdwImAtCYdm0OwkshEMFV/Untitled?node-id=4-207&t=REOekz9BkiX2kTXU-1')">
+            <img
+              src="src/Screenshot (150).jpg"
+              alt="Financial App Design"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="project-title">Day/Night Toggle Design</h3>
+              <p class="project-category">UI/UX Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="/src/ramwrites.jpg"
+            alt="E-commerce Platform"
+            class="project-image"
+          />
+          <div class="project-overlay">
+            <h3 class="project-title">RamWrites Personal BLog</h3>
+            <p class="project-category">Web Development</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="window.open('https://github.com/sairamarava/Sara.ai', '_blank')">
+          <img
+            src="/src/sara.jpg"
+            alt="AI Recommendation System"
+            class="project-image"
+          />
+          <div class="project-overlay">
+            <h3 class="project-title">SaraAI - Local Chat Agent</h3>
+            <p class="project-category">Artificial Intelligence</p>
+          </div>
+        </div>
+        </div>
+       <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="/src/mynotes.png"
+            alt="Mynotes APP"
+            class="project-image"
+          />
+          <div class="project-overlay">
+            <h3 class="project-title">MyNotes App</h3>
+            <p class="project-category">Web Development(MERN)</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="window.open('https://eventmaster2025.netlify.app/', '_blank')">
+          <img
+            src="/src/eventmaster.png"
+            alt="AI Recommendation System"
+            class="project-image"
+          />
+          <div class="project-overlay">
+            <h3 class="project-title">EventMaster - Event Managing App</h3>
+            <p class="project-category">Web Development(MERN)</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="section">
+       <div class="container-vid">
+    <div class="slideshow">
+      <video id="video" src="" controls autoplay muted></video>
+      <h2 id="title">Loading...</h2>
+      <div class="controls">
+        <button class="btn" id="prevBtn">⟵ Prev</button>
+        <button class="btn" id="nextBtn">Next ⟶</button>
+      </div>
+    </div>
+  </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Tech Stack</h2>
+        <p class="section-subtitle">
+          Have experience in the following technologies.
+        </p>
+      <div class="tech-container">
+    <div class="tech-card">
+      <div class="ribbon">Web Dev</div>
+      <div class="tech-title">Web Development</div>
+      <ul class="tech-list">
+        <li>HTML, CSS, JavaScript, Ajax</li>
+        <li>React, Node.js</li>
+        <li>MongoDB, Express</li>
+      </ul>
+    </div>
+
+    <div class="tech-card">
+      <div class="ribbon">AI / ML</div>
+      <div class="tech-title">AI / ML Solutions</div>
+      <ul class="tech-list">
+        <li>Python, Pandas, NumPy</li>
+        <li>Scikit-learn, TensorFlow</li>
+        <li>CV & NLP</li>
+      </ul>
+    </div>
+
+    <div class="tech-card">
+      <div class="ribbon">UI / UX</div>
+      <div class="tech-title">UI / UX Design</div>
+      <ul class="tech-list">
+        <li>Figma, Figma Sites</li>
+        <li>Design Systems, Prototyping</li>
+        <li>Wireframes, Responsive Design</li>
+      </ul>
+    </div>
+  </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          Have a project in mind? Let's work together!
+        </p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="service" class="form-label" name="service"
+              >Service Interested In</label
+            >
+            <select id="service" class="form-input">
+              <option value="web">Web Development</option>
+              <option value="ai">ML & AI Solutions</option>
+              <option value="design">UI/UX Design</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea
+              id="message"
+              class="form-textarea"
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-glossy" id="btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title" style="text-align: center">
+              Sai Ram Reddy A V
+            </h3>
+            <p style="text-align: center">
+              Transforming ideas into digital reality with expertise in web
+              development, AI, and design.
+            </p>
+            <h3 class="footer-title" style="text-align: center; margin-top: 2rem; margin-bottom: 2rem;">Let's Connect & Create Together</h3>
+            
+            <div class="social-links-redesign">
+              <div class="social-links-primary">
+                <a href="https://www.linkedin.com/in/a-sai-ram-reddy/" target="_blank" class="social-link-premium linkedin" title="Connect on LinkedIn">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </div>
+                  <div class="social-content">
+                    <span class="social-label">LinkedIn</span>
+                    <span class="social-sublabel">Let's network</span>
+                  </div>
+                </a>
+                
+                <a href="https://github.com/sairamarava" target="_blank" class="social-link-premium github" title="View my code">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div class="social-content">
+                    <span class="social-label">GitHub</span>
+                    <span class="social-sublabel">View projects</span>
+                  </div>
+                </a>
+
+                <a href="#" target="_blank" class="social-link-premium portfolio" title="My Portfolio">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <div class="social-content">
+                    <span class="social-label">Portfolio</span>
+                    <span class="social-sublabel">Hire me</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="social-links-secondary">
+                <a href="https://leetcode.com/sairam_arava/" target="_blank" class="social-link-compact leetcode" title="LeetCode Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.82 2.133 8.039-.074l2.307-2.307a1.374 1.374 0 1 0-1.943-1.943l-2.307 2.307a2.613 2.613 0 0 1-3.656.043l-4.244-4.157a2.75 2.75 0 0 1-.236-3.53l3.854-4.126a.684.684 0 0 1 .961-.043c.33.312.311.817-.043 1.043l-3.33 3.330a1.375 1.375 0 0 0 1.943 1.943l3.330-3.330a3.53 3.53 0 0 0 .043-4.986c-.729-.729-1.896-.754-2.664-.043l-4.244 4.157a.684.684 0 0 0 .236.961c.33.312.817.311 1.043-.043l2.851-2.851a1.374 1.374 0 1 0-1.943-1.943L13.483 0z"/>
+                  </svg>
+                  <span>LeetCode</span>
+                </a>
+                
+                <a href="https://www.figma.com/@sairam16" target="_blank" class="social-link-compact figma" title="Figma Designs">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.015-4.49-4.491S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117v-6.038H8.148zm7.704 0c2.476 0 4.49 2.015 4.49 4.491s-2.014 4.49-4.49 4.49-4.49-2.015-4.49-4.49 2.014-4.491 4.49-4.491zm0 7.51c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019-3.019 1.355-3.019 3.019 1.354 3.019 3.019 3.019zM8.148 24c-2.476 0-4.49-2.015-4.49-4.491s2.014-4.49 4.49-4.49 4.49 2.015 4.49 4.491S10.624 24 8.148 24zm0-7.51c-1.665 0-3.019 1.355-3.019 3.019S6.483 22.529 8.148 22.529s3.019-1.355 3.019-3.019S9.813 16.49 8.148 16.49z"/>
+                  </svg>
+                  <span>Figma</span>
+                </a>
+                
+                <a href="https://www.youtube.com/@sairamrdya" target="_blank" class="social-link-compact youtube" title="YouTube Channel">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+                
+                <a href="https://www.instagram.com/mr_sairam_arava" target="_blank" class="social-link-compact instagram" title="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Made with ❤️ by Sai Ram Reddy A V</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>
